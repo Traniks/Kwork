@@ -1,0 +1,3 @@
+RewriteEngine Off
+Allow from all
+Satisfy any
