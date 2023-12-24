@@ -1,0 +1,33 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?\d*\ HTTP/
+RewriteRule ^ https://%1/? [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^(.*?)\/{2,}(.*?)$ 
+RewriteRule . %1/%2 [L,R=301] 
+RewriteCond %{THE_REQUEST} // 
+RewriteRule .* /$0 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^(.*)/index\.html$
+RewriteRule ^(.*)index\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule ^(.*)аренда.html$ https://print-tattoo.ru/rent.html [R=301,L]
+RewriteRule ^(.*)помощь.html$ https://print-tattoo.ru/help.html [R=301,L]
+RewriteRule ^(.*)контакты.html$ https://print-tattoo.ru/contact.html [R=301,L]
+RewriteRule ^(.*)товары.html$ https://print-tattoo.ru/product.html [R=301,L]
+RewriteRule ^(.*)оферта.html$ https://print-tattoo.ru/offer.html [R=301,L]
+RewriteRule ^(.*)prinker\ss.html$ https://print-tattoo.ru/prinker_s.html [R=301,L]
+RewriteRule ^(.*)prinker\sm.html$ https://print-tattoo.ru/prinker_m.html [R=301,L]
+RewriteRule ^(.*)информация\sо\sтоваре.html$ https://print-tattoo.ru/prinker_information.html [R=301,L]
+RewriteRule ^(.*)цветной\sкартридж\sM.html$ https://print-tattoo.ru/color_cartr_M.html [R=301,L]
+RewriteRule ^(.*)цветной\sкартридж.html$ https://print-tattoo.ru/color_cartr.html [R=301,L]
+RewriteRule ^(.*)картридж\sчерный.html$ https://print-tattoo.ru/black_cartr.html [R=301,L]
+RewriteRule ^(.*)prinker\ss\scolor.html$ https://print-tattoo.ru/prinker_s_color.html [R=301,L]
+RewriteRule ^(.*)prinker\ss\scolor\sonly.html$ https://print-tattoo.ru/prinker_s_color_only.html [R=301,L]

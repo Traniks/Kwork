@@ -1,0 +1,26 @@
+User-agent: *                
+Disallow: /?                         
+Disallow: *?s=            
+Disallow: *&s=        
+Allow: /*/*.js            
+Allow: /*/*.css                      
+
+User-agent: GoogleBot      
+Disallow: /?                         
+Disallow: *?s=            
+Disallow: *&s=        
+Allow: /*/*.js            
+Allow: /*/*.css            
+Clean-Param: utm_source&utm_medium&utm_campaign                                            
+Clean-Param: openstat
+Crawl-delay: 120  
+
+User-agent: Yandex          
+Disallow: /?                         
+Disallow: *?s=            
+Disallow: *&s=        
+Allow: /*/*.js            
+Allow: /*/*.css            
+
+Host: https://print-tattoo.ru
+Sitemap: https://print-tattoo.ru/sitemap.xml
