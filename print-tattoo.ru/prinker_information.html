@@ -35,17 +35,21 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/93422848" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 	<link rel="stylesheet" href="css/information_prinker.css">
-	<link rel="stylesheet" href="js/информация о товаре.scss">
-	<link rel="stylesheet" href="js/информация о товаре.js">
+	<!-- Выдает ошибку в консоль так как нельзя использовать sass/scss, а нужно перевести его в css и тогда подключать  -->
+	<!-- <link rel="stylesheet" href="js/информация о товаре.scss"> -->
+	<!-- Выдает ошибку в консоль так как нельзя подключать js через тег link, а нужно подключать его в конце body через тег script -->
+	<!-- <link rel="stylesheet" href="js/информация о товаре.js"> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
 	<title>Что такое prinker</title>
 	<meta name="description" content="Prinker - это новое решение неудачливым татуировкам, 3 секунды и тату оказывается на вашем теле, с prinker вы сможете воплотить свои творческие идеи в реальность.  ">
-  <meta name="keywords" content="Prinker,временное тату,prinker купить,принкер Москва,prinker s,prinker tattoo,prinker Россия,принтер для временных татуировок,prinker тату купить,тату принтер prinker "/>
+	<meta name="keywords" content="Prinker,временное тату,prinker купить,принкер Москва,prinker s,prinker tattoo,prinker Россия,принтер для временных татуировок,prinker тату купить,тату принтер prinker "/>
 </head>
 
 <body>
@@ -59,133 +63,328 @@
 			<a class="nav_link" href="contact.html">Контакты</a>
 		</div>
 	</header>
-	
-	  <a class="logo" href="/"><img src="images/logo_white.png" width="120" height="35px" alt="prinker tattoo"></a>
-	  <a class="cart" href="https://api.whatsapp.com/send?phone=79123930353&text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%2C%20%D1%85%D0%BE%D1%87%D1%83%20Prinker%20."><img src="images/cart.webp" height="70px"  width="75px" alt="корзина"></a>  
+
+	<a class="logo" href="/">
+		<img src="images/logo_white.png" width="120" height="35px" alt="prinker tattoo">
+	</a>
+	<a class="cart" href="https://api.whatsapp.com/send?phone=79123930353&text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%2C%20%D1%85%D0%BE%D1%87%D1%83%20Prinker%20.">
+		<img src="images/cart.webp" height="70px"  width="75px" alt="корзина">
+	</a>
+
 	<!-- Навигация 1200px -->
-	  <input type="checkbox" id="ham-menu">
-	  
-	  <label for="ham-menu">
+	<input type="checkbox" id="ham-menu">
+
+	<label for="ham-menu">
 		<div class="hide-des">
-		  <span class="menu-line"></span>
-		  <span class="menu-line"></span>
-		  <span class="menu-line"></span>
-		  <span class="menu-line"></span>
-		  <span class="menu-line"></span>
-		  <span class="menu-line"></span>
+			<span class="menu-line"></span>
+			<span class="menu-line"></span>
+			<span class="menu-line"></span>
+			<span class="menu-line"></span>
+			<span class="menu-line"></span>
+			<span class="menu-line"></span>
 		</div>
-	  </label>
-	  <div class="full-page-green"></div>
-	  <div class="ham-menu">
+	</label>
+
+	<div class="full-page-green"></div>
+	<div class="ham-menu">
 		<ul class="centre-text bold-text">
-		  <a href="product.html"><li>Товары</li></a>
-	  <a href="prinker_information.html"><li>Информация</li></a>
-	  <a href="rent.html"><li>Аренда</li></a>
-	  <a href="help.html"><li>Помощь</li></a>
-	  <a href="contact.html"><li>Контакты</li></a>
+			<a href="product.html">
+				<li>Товары</li>
+			</a>
+			<a href="prinker_information.html">
+				<li>Информация</li>
+			</a>
+			<a href="rent.html">
+				<li>Аренда</li>
+			</a>
+			<a href="help.html">
+				<li>Помощь</li>
+			</a>
+			<a href="contact.html">
+				<li>Контакты</li>
+			</a>
 		</ul>
-	  </div>
-	  <h1>Информация о товаре</h1>
-<div class="info">
-  <div class="container6"></div>
-  
-  <div class="container1">
-	<div class="description">
-  <ul class="ul1">
-	<p>Что такое Prinker</p>
-	  <li>Prinker - это новое решение неудачливым татуировкам </li>
-	  <li>3 секунды и татуировка оказывается на вашем теле </li>
-	  <li>Платформа prinker.net</li>
-	  <li>Удобное приложение Prinker </li>
-	  <li>Каталог из тысячи готовых изображений,<br>с возможностью добавления своих изображений</li>
-	  <li>Максимальная длина изображения 100 см </li>
-	  <li>Максимальная ширина изображения 2.2 см</li>
-  </ul>
 	</div>
-	<div class="application">
-	  <ul class="ul2">
-		<p style="text-align: center;">Приложение для работы</p>
-	  <li>Каталог из тысячи эскизов;</li>
-	  <li>Возможность добавления своих эскизов;</li>
-	  <li>Подключение через  Bluetooth; </li>
-	  <li>Prinler.net работает с ios и android;</li>
-	  <li>Регулировка размера и вращения </li>
-	  <a href="https://www.prinker.net/"><li> <--Ознакомиться--></li></a>
-	  </ul>
-	</div>
-	<div class="safe">
-	  <ul class="ul3">
-		<p style="text-align: center;">Безопасность чернил</p>
-		<li>Чернила специально разработаны для этих целей;</li>
-	  <li>Дерматологически протестировано и соответствует европейским нормам;</li>
-	  <li>Применимо к (EC 1223/2009);</li>
-	  <li>Устойчив к воздействию воды;</li>
-		
+	
+	<!-- Информация о товаре -->
+	<h1 class="title-my">Информация о товаре</h1>
+	<section class="info">
 
-		
-	  </ul>
-	</div>
-  </div>
-  
-</div>
+		<div class="container6"></div>
 
+		<div class="container1">
+			<div class="description">
 
-</div>
+				<ul class="ul1">
+					<p>Что такое Prinker</p>
+					<li>Prinker - это новое решение неудачливым татуировкам </li>
+					<li>3 секунды и татуировка оказывается на вашем теле </li>
+					<li>Платформа prinker.net</li>
+					<li>Удобное приложение Prinker </li>
+					<li>Каталог из тысячи готовых изображений,<br>с возможностью добавления своих изображений</li>
+					<li>Максимальная длина изображения 100 см </li>
+					<li>Максимальная ширина изображения 2.2 см</li>
+				</ul>
+			</div>
 
+			<div class="application">
+				<ul class="ul2">
+					<p style="text-align: center;">Приложение для работы</p>
+					<li>Каталог из тысячи эскизов;</li>
+					<li>Возможность добавления своих эскизов;</li>
+					<li>Подключение через  Bluetooth; </li>
+					<li>Prinker.net работает с ios и android;</li>
+					<li>Регулировка размера и вращения </li>
+					<a href="https://www.prinker.net/"><li> <--Ознакомиться--></li></a>
+				</ul>
+			</div>
+			
+			<div class="safe">
+				<ul class="ul3">
+					<p style="text-align: center;">Безопасность чернил</p>
+					<li>Чернила специально разработаны для этих целей;</li>
+					<li>Дерматологически протестировано и соответствует европейским нормам;</li>
+					<li>Применимо к (EC 1223/2009);</li>
+					<li>Устойчив к воздействию воды;</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-<!-- 3 Секунды -->
+	<!-- Тарифы приложения -->
 
-<h2>Тарифы приложения</h2>
-<div class="text-align">
-  <img  class="tarifs" src="images/subscribe_aflat.webp" width="1400px" height="341px"   alt="тариф"> 
-</div>
+	<section class="tariffs">
+		<div class="tariffs__container">
+			<h2 class="tariffs__title">Тарифы приложения</h2>
 
+			<div class="tariffs__wrapper">
 
-<div class="text-align2">
-<img class="tarif"  src="images/subscribe_vertically.webp" width="488" height="1500px"  alt="тариф">
-</div>
+				<!-- block-1 -->
+				<div class="tariffs__block">
+					<div class="tariffs__block-top block-top">
+						<h4 class="block-top__subtitle">Для начинающих</h4>
+						<h3 class="block-top__title">В-Назад</h3>
+						<p class="block-top__price block-top__price_free">Бесплатно</p>
+					</div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-   <div class="row">
-	 <div class="footer-col">
-	   <h3>Компания</h3>
-	   <ul>
-		<li style="color: rgba(255, 255, 255, 0.562);">Местонахождение: Тюмень</li>
-		 <li style="color: rgba(255, 255, 255, 0.562);">Официальный дистрибьютор в России и СНГ</li>
-		 <li style="color: rgba(255, 255, 255, 0.562);">ИНН: 720412892383</li>
-		 
-	   </ul>
-	 </div>
-	 <div class="footer-col">
-	   <h3>Помощь</h3>
-	   <ul>
-		<li><a href="product.html">Товары</a></li>
-		 <li><a href="help.html">Доставка</a></li>
-		 <li><a href="https://www.youtube.com/watch?v=rNntNTCR5Z8&t=76s">Инструкция</a></li>
-	   </ul>
-	 </div>
-	 <div class="footer-col">
-	   <h3>Доп информация</h3>
-	   <ul>
-		<li style="color: rgba(255, 255, 255, 0.562);">prinker.russia@mail.ru</li>
-		<li><a href="rent.html">Аренда Prinker в городе Тюмень</a></li>
-		<li style="color: rgba(255, 255, 255, 0.562);"><a href="offer.html">Оферта</a></li>
-		 
-	   </ul>
-	 </div>
-	 <div class="footer-col">
-	   <h3>Социальные сети</h3>
-	   <div class="social-links">
-		<a href="https://www.youtube.com/@PrinkerOfficial"><img src="images/social_network/YT.webp" height="33px" width="33px" alt="youtube"><i class="fab fa-facebook-f"></i></a>
-		  <a href="https://api.whatsapp.com/send?phone=79123930353&text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%2C%20%D1%85%D0%BE%D1%87%D1%83%20Prinker%20."><img src="images/social_network/WA2.webp" height="33px" width="33px" alt="whatsapp"><i class="fab fa-twitter"></i></a>
-		  <a href="https://t.me/tattohere"><img src="images/social_network/TG2.webp" height="33px" width="33px" alt="telegram"><i class="fab fa-instagram"></i></a>
-	   </div>
-	 </div>
-   </div>
-  </div>
-</footer>
+					<dl class="tariffs__block-bottom block-bottom">
+
+						<!-- row-1 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Использование контента Prinker</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-2 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Загрузки</p>
+							<p class="block-bottom__row_right">20 загрузок в месяц</p>
+						</dt>
+
+						<!-- row-3 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Зарисовка</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-4 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Количество одновременных пользователей</p>
+							<p class="block-bottom__row_right">1</p>
+						</dt>
+
+						<!-- row-5 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Счетчик</p>
+							<img class="block-bottom__row-img" src="./images/check-mark.png" alt="yes">
+						</dt>
+
+						<!-- row-6 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Автономный режим</p>
+							<img class="block-bottom__row-img" src="./images/cross.png" alt="no">
+						</dt>
+
+						<!-- row-7 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Создание списков изображений</p>
+							<img class="block-bottom__row-img" src="./images/cross.png" alt="no">
+						</dt>
+
+					</dl>
+				</div>
+
+				<!-- block-2 -->
+				<div class="tariffs__block">
+					<div class="tariffs__block-top block-top">
+						<h4 class="block-top__subtitle">Рекомендуется для частных лиц</h4>
+						<h3 class="block-top__title">Нежное касание</h3>
+						<p class="block-top__price block-top__price_average">4,9 долларов США</p>
+					</div>
+
+					<dl class="tariffs__block-bottom block-bottom">
+
+						<!-- row-1 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Использование контента Prinker</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-2 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Загрузки</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-3 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Зарисовка</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-4 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Количество одновременных пользователей</p>
+							<p class="block-bottom__row_right">1</p>
+						</dt>
+
+						<!-- row-5 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Счетчик</p>
+							<img class="block-bottom__row-img" src="./images/check-mark.png" alt="yes">
+						</dt>
+
+						<!-- row-6 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Автономный режим</p>
+							<img class="block-bottom__row-img" src="./images/cross.png" alt="no">
+						</dt>
+
+						<!-- row-7 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Создание списков изображений</p>
+							<img class="block-bottom__row-img" src="./images/check-mark.png" alt="yes">
+						</dt>
+
+					</dl>
+				</div>
+
+				<!-- block-3 -->
+				<div class="tariffs__block">
+					<div class="tariffs__block-top block-top">
+						<h4 class="block-top__subtitle">Рекомендуется для бизнеса</h4>
+						<h3 class="block-top__title">Витрина</h3>
+						<p class="block-top__price block-top__price_high">9,9 долларов США</p>
+					</div>
+
+					<dl class="tariffs__block-bottom block-bottom">
+
+						<!-- row-1 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Использование контента Prinker</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-2 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Загрузки</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-3 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Зарисовка</p>
+							<p class="block-bottom__row_right">Без ограничений</p>
+						</dt>
+
+						<!-- row-4 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Количество одновременных пользователей</p>
+							<p class="block-bottom__row_right">5</p>
+						</dt>
+
+						<!-- row-5 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Счетчик</p>
+							<img class="block-bottom__row-img" src="./images/check-mark.png" alt="yes">
+						</dt>
+
+						<!-- row-6 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Автономный режим</p>
+							<img class="block-bottom__row-img" src="./images/check-mark.png" alt="yes">
+						</dt>
+
+						<!-- row-7 -->
+						<dt class="block-bottom__row">
+							<p class="block-bottom__row_left">Создание списков изображений</p>
+							<img class="block-bottom__row-img" src="./images/check-mark.png" alt="yes">
+						</dt>
+
+					</dl>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="footer-col">
+					<h3>Компания</h3>
+					
+					<ul>
+						<li style="color: rgba(255, 255, 255, 0.562);">Местонахождение: Тюмень</li>
+						<li style="color: rgba(255, 255, 255, 0.562);">Официальный дистрибьютор в России и СНГ</li>
+						<li style="color: rgba(255, 255, 255, 0.562);">ИНН: 720412892383</li>
+						
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h3>Помощь</h3>
+					<ul>
+						<li><a href="product.html">Товары</a></li>
+						<li><a href="help.html">Доставка</a></li>
+						<li><a href="https://www.youtube.com/watch?v=rNntNTCR5Z8&t=76s">Инструкция</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h3>Доп информация</h3>
+					<ul>
+						<li style="color: rgba(255, 255, 255, 0.562);">prinker.russia@mail.ru</li>
+						<li><a href="rent.html">Аренда Prinker в городе Тюмень</a></li>
+						<li style="color: rgba(255, 255, 255, 0.562);"><a href="offer.html">Оферта</a></li>
+						
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h3>Социальные сети</h3>
+					<div class="social-links">
+						<a href="https://www.youtube.com/@PrinkerOfficial">
+							<img src="images/social_network/YT.webp" height="33px" width="33px" alt="youtube">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="https://api.whatsapp.com/send?phone=79123930353&text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%2C%20%D1%85%D0%BE%D1%87%D1%83%20Prinker%20.">
+							<img src="images/social_network/WA2.webp" height="33px" width="33px" alt="whatsapp">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="https://t.me/tattohere">
+							<img src="images/social_network/TG2.webp" height="33px" width="33px" alt="telegram">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
 
 </body>
 
