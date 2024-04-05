@@ -67,3 +67,7 @@ h3 {
         font-size: 1.3em
     }
 }
+
+main h1[data-v-c046ed3e] {
+    font-size: clamp(5em, 17vw, 13em);
+}
