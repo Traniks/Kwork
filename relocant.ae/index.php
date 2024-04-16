@@ -87,7 +87,7 @@ require_once("PL/UTMCheck.php");
 									введите свой номер телефона и мы свяжемся с
 									вами
 								</h1>
-								<form
+								<form class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
@@ -155,7 +155,7 @@ require_once("PL/UTMCheck.php");
 									введите ваши данные и мы напишем вам в
 									мессенджере
 								</h1>
-								<form
+								<form class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
@@ -247,7 +247,7 @@ require_once("PL/UTMCheck.php");
 									введите ваши данные и мы свяжемся с вами
 									удобным для вас способом
 								</h1>
-								<form
+								<form class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
@@ -342,7 +342,7 @@ require_once("PL/UTMCheck.php");
 									введите ваши данные и мы напишем вам в
 									telegram
 								</h1>
-								<form
+								<form class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
@@ -417,7 +417,7 @@ require_once("PL/UTMCheck.php");
 									введите ваши данные и мы напишем вам в
 									whatsapp
 								</h1>
-								<form
+								<form class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
@@ -497,20 +497,29 @@ require_once("PL/UTMCheck.php");
 									src="/assets/zoom-CUWC7mcD.svg"
 									style="width: 8em"
 								/>
-								<form
+								<form class="send_mail"
 									data-v-719c0bb5=""
 									action="mail.php"
 									method="post"
 									style="width: 100%"
 								>
-									<div data-v-719c0bb5="" class="zoom-input">
+								<div data-v-719c0bb5="" class="zoom-input">
+
+									<div class="input-box">
+										<label for="username">Введите номер телефона:</label>
 										<input
 											data-v-719c0bb5=""
+											type="tel"
 											name="username"
-											placeholder="НОМЕР ТЕЛЕФОНА"
 											required=""
+											placeholder="Введите номер телефона"
 										/>
+									</div>
+
+									<div class="input-box">
+										<label for="date">Введите дату:</label>
 										<input
+											id="input-date"
 											data-v-719c0bb5=""
 											type="date"
 											name="date"
@@ -519,6 +528,10 @@ require_once("PL/UTMCheck.php");
 											checked
 											value="дд.мм.гггг"
 										/>
+									</div>
+
+									<div class="input-box">
+										<label for="time">Введите время:</label>
 										<input
 											data-v-719c0bb5=""
 											type="time"
@@ -526,7 +539,10 @@ require_once("PL/UTMCheck.php");
 											max="24:00"
 											name="time"
 											required=""
+											placeholder=""
 										/>
+									</div>
+
 									</div>
 									<div data-v-719c0bb5="" class="check-group">
 										<input
@@ -932,9 +948,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-1"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									В процессе оформления (ВНЖ) в Объединённых Арабских Эмиратах (ОАЭ), обычно требуется около 7 рабочих дней. Этот период времени включает в себя подачу всех необходимых документов и их последующую обработку соответствующими органами. Однако, стоит учитывать, что этот срок является средним и может варьироваться в зависимости от конкретных обстоятельств и требований.
 								</p>
 							</div>
 							<div
@@ -961,9 +975,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-2"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									При оформлении визы скрытых платежей нет. Все необходимые платежи полностью включены в первоначальную стоимость услуги, составляющую 4990 AED. Это обеспечивает прозрачность и понимание всех затрат заранее.
 								</p>
 							</div>
 							<div
@@ -990,9 +1002,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-3"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									Да, конечно! Мы предлагаем услугу спонсирования виз для членов вашей семьи. Однако, для того чтобы воспользоваться этой возможностью, вы должны сначала получить Emirates ID. После успешного получения вашего Emirates ID, вы сможете спонсировать визы для своих близких.
 								</p>
 							</div>
 							<div
@@ -1019,10 +1029,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-4"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
-								</p>
+									Оформление резидентской визы в ОАЭ на 1 год стоит 4990 AED "под ключ". Эта цена включает все необходимые услуги и сборы, связанные с процессом получения визы.
 							</div>
 							<div
 								data-v-6685df05=""
@@ -1048,9 +1055,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-5"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									Если вашу заявку на визу отклонили ранее, не стоит отчаиваться. Вам следует подавать заявку снова, и мы готовы помочь в этом процессе. Благодаря нашему опыту, мы знаем, как правильно подготовить и подать документы, чтобы максимально минимизировать риск повторного отказа. Мы поможем вам на каждом этапе подачи заявки, чтобы увеличить ваши шансы на успешное получение визы.
 								</p>
 							</div>
 							<div
@@ -1077,9 +1082,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-6"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									С резидентской визой ОАЭ вы можете проживать где угодно в пределах страны, а также за её пределами. Единственное требование — вам необходимо возвращаться в ОАЭ как минимум один раз каждые шесть месяцев, чтобы подтвердить свой резидентский статус. В остальном, нет никаких ограничений на ваше место проживания, предоставляя вам свободу выбора места, которое наилучшим образом соответствует вашим нуждам и предпочтениям.
 								</p>
 							</div>
 							<div
@@ -1106,9 +1109,7 @@ require_once("PL/UTMCheck.php");
 									id="ask-7"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									Срок действия резидентской визы в ОАЭ варьируется от 1 года до 10 лет в случае получения так называемой "золотой визы". Также существуют варианты на 2, 3 и 5 лет. Конкретный срок зависит от индивидуальных потребностей и критериев, которые вы удовлетворяете. Возможность выбора срока позволяет гибко подойти к планированию вашего пребывания в стране, исходя из ваших личных и профессиональных обстоятельств.
 								</p>
 							</div>
 							<div
@@ -1135,9 +1136,9 @@ require_once("PL/UTMCheck.php");
 									id="ask-8"
 									class="content hide"
 								>
-									Процесс оформления документов на ВНЖ в ОАЭ
-									обычно занимает около 7 дней с момента
-									подачи заявки.
+									Безусловно, в получении резидентской визы ОАЭ может произойти отказ, однако такие случаи крайне редки. На основе нашего опыта, за время работы мы успешно оформили более 2000 виз, и лишь в одном случае столкнулись с отказом. Этот отказ был вызван тем, что клиент не сообщил о наличии судимости за мелкое хулиганство в своей стране. Поэтому мы настоятельно рекомендуем предоставлять полную и точную информацию при подаче документов на визу, чтобы минимизировать риск отказа.
+
+
 								</p>
 							</div>
 						</div>
@@ -1930,7 +1931,7 @@ require_once("PL/UTMCheck.php");
 															data-v-182029f8=""
 															class="notch"
 														></div>
-														<iframe
+														<!-- <iframe
 															data-v-182029f8=""
 															class="lazy"
 															data-src="//www.youtube.com/embed/GpcaJQ40q1Y"
@@ -1938,7 +1939,12 @@ require_once("PL/UTMCheck.php");
 															frameborder="0"
 															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 															allowfullscreen
-														></iframe>
+														></iframe> -->
+
+														<iframe 
+														data-v-182029f8=""
+														class="lazy"
+														width="466" height="829" src="https://www.youtube.com/embed/nrqnvJCwilg" title="отзыв 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -1966,7 +1972,7 @@ require_once("PL/UTMCheck.php");
 															data-v-182029f8=""
 															class="notch"
 														></div>
-														<iframe
+														<!-- <iframe
 															data-v-182029f8=""
 															class="lazy"
 															data-src="//www.youtube.com/embed/y6fThXQPT6I"
@@ -1974,7 +1980,12 @@ require_once("PL/UTMCheck.php");
 															frameborder="0"
 															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 															allowfullscreen
-														></iframe>
+														></iframe> -->
+														
+														<iframe 
+														data-v-182029f8=""
+														class="lazy"
+														width="466" height="829" src="https://www.youtube.com/embed/OP5Mw_Lyhdg" title="отзыв 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -2002,7 +2013,7 @@ require_once("PL/UTMCheck.php");
 															data-v-182029f8=""
 															class="notch"
 														></div>
-														<iframe
+														<!-- <iframe
 															data-v-182029f8=""
 															class="lazy"
 															data-src="//www.youtube.com/embed/Ex2iAyaEElQ"
@@ -2010,7 +2021,12 @@ require_once("PL/UTMCheck.php");
 															frameborder="0"
 															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 															allowfullscreen
-														></iframe>
+														></iframe> -->
+
+														<iframe 
+														data-v-182029f8=""
+														class="lazy"
+														width="466" height="829" src="https://www.youtube.com/embed/j4UJfT07GfA" title="отзыв 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -2038,7 +2054,7 @@ require_once("PL/UTMCheck.php");
 															data-v-182029f8=""
 															class="notch"
 														></div>
-														<iframe
+														<!-- <iframe
 															data-v-182029f8=""
 															class="lazy"
 															data-src="//www.youtube.com/embed/h02-6X_EWu0"
@@ -2046,7 +2062,12 @@ require_once("PL/UTMCheck.php");
 															frameborder="0"
 															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 															allowfullscreen
-														></iframe>
+														></iframe> -->
+
+														<iframe 
+														data-v-182029f8=""
+														class="lazy"
+														width="466" height="829" src="https://www.youtube.com/embed/ALCJ-0OcU-U" title="отзыв 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -2074,7 +2095,7 @@ require_once("PL/UTMCheck.php");
 															data-v-182029f8=""
 															class="notch"
 														></div>
-														<iframe
+														<!-- <iframe
 															data-v-182029f8=""
 															class="lazy"
 															data-src="//www.youtube.com/embed/MkPPYLiSro0"
@@ -2082,12 +2103,17 @@ require_once("PL/UTMCheck.php");
 															frameborder="0"
 															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 															allowfullscreen
-														></iframe>
+														></iframe> -->
+
+														<iframe 
+														data-v-182029f8=""
+														class="lazy"
+														width="466" height="829" src="https://www.youtube.com/embed/_cIWS84dB2A" title="отзыв 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
 										</li>
-										<li
+										<!-- <li
 											data-v-c046ed3e=""
 											class="carousel__slide carousel__slide--clone"
 											aria-hidden="true"
@@ -2122,7 +2148,7 @@ require_once("PL/UTMCheck.php");
 													</div>
 												</div>
 											</div>
-										</li>
+										</li> -->
 									</ol>
 								</div>
 								<ol
@@ -2165,20 +2191,20 @@ require_once("PL/UTMCheck.php");
 											aria-label="Navigate to slide 5"
 										></button>
 									</li>
-									<li class="carousel__pagination-item">
+									<!-- <li class="carousel__pagination-item">
 										<button
 											type="button"
 											class="carousel__pagination-button"
 											aria-label="Navigate to slide 6"
 										></button>
-									</li>
+									</li> -->
 								</ol>
 								<div
 									class="carousel__liveregion carousel__sr-only"
 									aria-live="polite"
 									aria-atomic="true"
 								>
-									Item 2 of 6
+									Item 2 of 5
 								</div>
 							</section>
 							<img
@@ -2303,18 +2329,49 @@ require_once("PL/UTMCheck.php");
 				</div>
 			</div>
 		</div>
+		
+		
+		
+		<div data-v-61485933="" id="success-modal" data-v-719c0bb5="" class="modal success hide" style="--b6ff6232: url('/modal-msg-bg.jpg')">
+				<div data-v-61485933="" class="modal-content">
+					<div data-v-61485933="" class="modal-top">
+						<div data-v-61485933="" class="close-button" onclick="document.getElementById('success-modal').classList.toggle('hide');">
+							<img data-v-61485933="" src="/icns/close.svg" style="vertical-align: middle; width: 2em">
+						</div>
+					</div>
+					<div data-v-61485933="" style="padding-bottom: 2em">
+						<div data-v-61485933="">
+							<div data-v-719c0bb5="" class="modal-contact-messenger"><h1 data-v-719c0bb5="">Спасибо! <br> Ваше сообщение успешно отправлено</h1></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Загрузка стилий для шрифта -->
 		<script>
-			// Создаем элемент <link> для загрузки второго файла стилей
 			const fontLink = document.createElement('link');
 			fontLink.rel = 'stylesheet';
 			fontLink.href = 'assets/optimization.css';
-
-			// Ждем события загрузки шрифта (можете использовать другое событие, если у вас есть другие способы определения загрузки шрифта)
+			
 			document.fonts.ready.then(function() {
-				// Добавляем элемент <link> для загрузки второго файла стилей
 				document.head.appendChild(fontLink);
 			});
 		</script>
+
+		<!-- Фикс формы zoom для ios систем -->
+		<script>
+			const input = document.querySelector('#input-date')
+	
+			input.addEventListener('focus', function () {
+				this.type = 'date'
+			})
+			input.addEventListener('blur', function () {
+				if (this.value === '') {
+					this.type = 'text'
+				}
+			})
+		</script>
+
 		<script src="assets/slider.js"></script>
 		<script src="assets/index.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.0.5/dist/lazyload.min.js"></script>
@@ -2322,5 +2379,24 @@ require_once("PL/UTMCheck.php");
 			var myLazyLoad = new LazyLoad()
 			myLazyLoad.update()
 		</script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script>
+$(".send_mail").on("submit", function(){
+	$.ajax({
+		url: '/mail.php',
+		method: 'post',
+		dataType: 'html',
+		data: $(this).serialize(),
+		success: function(data){
+			$('.modal').addClass('hide');
+			$('.success').removeClass('hide');
+			return true;
+		}
+	});
+	return false;
+});
+</script>
+		
+		
 	</body>
 </html>
