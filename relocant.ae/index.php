@@ -505,43 +505,34 @@ require_once("PL/UTMCheck.php");
 								>
 								<div data-v-719c0bb5="" class="zoom-input">
 
-									<div class="input-box">
-										<label for="username">Введите номер телефона:</label>
-										<input
-											data-v-719c0bb5=""
-											type="tel"
-											name="username"
-											required=""
-											placeholder="Введите номер телефона"
-										/>
-									</div>
+									<input
+										data-v-719c0bb5=""
+										type="tel"
+										name="username"
+										required=""
+										placeholder="Введите телефон"
+									/>
 
-									<div class="input-box">
-										<label for="date">Введите дату:</label>
-										<input
-											id="input-date"
+									<label class="form-zoom" data-custom-date>
+										<div class="custom-input">Введите дату</div>
+										<input type="date" name="date1" 
 											data-v-719c0bb5=""
-											type="date"
-											name="date"
 											min="2024-03-27"
 											required=""
 											checked
 											value="дд.мм.гггг"
 										/>
-									</div>
+									</label>
 
-									<div class="input-box">
-										<label for="time">Введите время:</label>
-										<input
+									<label class="form-zoom" data-custom-date>
+										<div class="custom-input">Введите время</div>
+										<input type="time" name="date2" 
 											data-v-719c0bb5=""
-											type="time"
 											min="12:00"
 											max="24:00"
-											name="time"
 											required=""
-											placeholder=""
 										/>
-									</div>
+									</label>
 
 									</div>
 									<div data-v-719c0bb5="" class="check-group">
@@ -2360,16 +2351,31 @@ require_once("PL/UTMCheck.php");
 
 		<!-- Фикс формы zoom для ios систем -->
 		<script>
-			const input = document.querySelector('#input-date')
-	
-			input.addEventListener('focus', function () {
-				this.type = 'date'
-			})
-			input.addEventListener('blur', function () {
-				if (this.value === '') {
-					this.type = 'text'
+			const customLabels = document.querySelectorAll('label[data-custom-date]')
+			customLabels.forEach(makeCustomDateLabel)
+
+			function makeCustomDateLabel(label) {
+				const customInput = label.querySelector('.custom-input')
+				const placeholder = customInput.innerText
+
+				const input = label.querySelector('input');
+
+				if (['date', 'time'].includes(input.type) === false) {
+					return
 				}
-			})
+
+				input.addEventListener('focus', e => {
+					e.target?.showPicker()
+				})
+				input.addEventListener('change', e => {
+					const value = e.target.value
+					if (value) {
+						label.querySelector('.custom-input').innerText = value
+					} else {
+						label.querySelector('.custom-input').innerText = placeholder
+					}
+				})
+			}
 		</script>
 
 		<script src="assets/slider.js"></script>
