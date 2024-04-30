@@ -6,8 +6,18 @@ $DefData = [
 require_once("PL/UTMCheck.php");
 ?>
 <!DOCTYPE html>
+
+
 <html lang="en">
 	<head>
+			<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-K5NXH6RG');</script>
+		<!-- End Google Tag Manager -->
+
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/png" href="/icon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -348,6 +358,7 @@ require_once("PL/UTMCheck.php");
 									data-v-719c0bb5=""
 								>
 									<input
+										id="tg"
 										data-v-719c0bb5=""
 										type="text"
 										placeholder="НОМЕР ТЕЛЕФОНА ИЛИ ИМЯ ПОЛЬЗОВАТЕЛЯ"
@@ -506,6 +517,7 @@ require_once("PL/UTMCheck.php");
 								<div data-v-719c0bb5="" class="zoom-input">
 
 									<input
+										id="date"
 										data-v-719c0bb5=""
 										type="tel"
 										name="username"
@@ -516,6 +528,7 @@ require_once("PL/UTMCheck.php");
 									<label class="form-zoom" data-custom-date>
 										<div class="custom-input">Введите дату</div>
 										<input type="date" name="date1" 
+											id="date1"
 											data-v-719c0bb5=""
 											min="2024-03-27"
 											required=""
@@ -526,7 +539,8 @@ require_once("PL/UTMCheck.php");
 
 									<label class="form-zoom" data-custom-date>
 										<div class="custom-input">Введите время</div>
-										<input type="time" name="date2" 
+										<input type="time" name="date2"
+											id="date2" 
 											data-v-719c0bb5=""
 											min="12:00"
 											max="24:00"
@@ -893,7 +907,7 @@ require_once("PL/UTMCheck.php");
 										Забронируйте цену сейчас!
 									</h3>
 									<button
-										onclick="document.getElementById('phone-modal').classList.toggle('hide');"
+										onclick="document.getElementById('all-modal').classList.toggle('hide');"
 										data-v-8aaa8106=""
 										class="fancy-button"
 									>
@@ -1600,13 +1614,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">01</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my">
 										Поддержка в получении водительских прав
 									</h3>
 									<p data-v-70fe3462="">
@@ -1621,13 +1635,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">02</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my" >
 										консультации по открытию бизнеса
 									</h3>
 									<p data-v-70fe3462="">
@@ -1641,13 +1655,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">03</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my">
 										Бухгалтерские и налоговые услуги
 									</h3>
 									<p data-v-70fe3462="">
@@ -1661,13 +1675,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">04</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my">
 										аренда и покупка недвижимости
 									</h3>
 									<p data-v-70fe3462="">
@@ -1681,13 +1695,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">05</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my">
 										Регистрация детей в образовательные
 										учреждения
 									</h3>
@@ -1701,13 +1715,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">06</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my">
 										Медицинское обслуживание и страхование
 									</h3>
 									<p data-v-70fe3462="">
@@ -1721,13 +1735,13 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-70fe3462=""
 								data-v-c046ed3e=""
-								class="card"
+								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading">
+								<div data-v-70fe3462="" class="number-heading number-heading_my">
 									<h1 data-v-70fe3462="">07</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="">
+									<h3 data-v-70fe3462="" class="h_my">
 										перевод и легализация документов
 									</h3>
 									<p data-v-70fe3462="">
@@ -2404,5 +2418,10 @@ $(".send_mail").on("submit", function(){
 </script>
 		
 		
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5NXH6RG"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 	</body>
 </html>
+

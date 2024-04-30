@@ -224,6 +224,17 @@ p {
     }
 }
 
+#date, #date1, #date2 {
+    width: 33%;
+}
+
+@media (max-width:1000px) {
+    #date,#date1,#date2 {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
 input[type='date'],
 input[type='time'] {
     opacity: 0;
@@ -273,15 +284,34 @@ input:not([type=checkbox]) {
     font-size: 1.2em;
     border-radius: 1em;
     border: none;
-    width: 33%;
+    width: 100%;
     margin-top: 10px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    text-align: center;
 }
 
 @media (max-width:1000px) {
     input:not([type=checkbox]) {
         width: 100%;
         font-size: 18px;
+    }
+}
+
+@media (max-width:600px) {
+    #tg {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px) {
+    #tg {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:400px) {
+    #tg {
+        font-size: 11px;
     }
 }
 
@@ -1158,6 +1188,12 @@ p[data-v-3137ddbc] {
         font-size: 18px
     }
 
+    .card_my[data-v-70fe3462] {
+        border-radius: 30px;
+        background-color: #f8f0df;
+        margin: 5em 1em;
+    }
+
     .card p[data-v-70fe3462] {
         font-size: 1em
     }
@@ -1170,15 +1206,34 @@ p[data-v-3137ddbc] {
         position: static
     }
 
+    .number-heading_my[data-v-70fe3462] {
+        background-color: #ddc3a4;
+        width: 5em;
+        height: 4em;
+        padding: 10px;
+        position: relative;
+    }
+
+
     .number-heading h1[data-v-70fe3462] {
         position: static;
         color: #fff;
         transform: unset
     }
 
+    .number-heading_my h1[data-v-70fe3462] {
+        position: absolute;
+        color: #9d867a;
+        transform: translate(-50%, -50%);
+    }
+
     h1[data-v-70fe3462],
     h3[data-v-70fe3462] {
         margin-top: unset
+    }
+
+    .h_my[data-v-70fe3462] {
+        margin-top: 1em;
     }
 }
 
