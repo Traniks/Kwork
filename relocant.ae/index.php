@@ -1,21 +1,30 @@
-<?php 
+<?php
 $DefData = [
 	"Title" => "<span>Оформим или продлим<br data-v-c046ed3e=''/>резидентскую визу в ОАЭ ОТ 1 ГОДА ДО 10 ЛЕТ</span>",
 	"Phone" => "+971 50 719 0519",
 ];
-require_once("PL/UTMCheck.php");
+require_once ("PL/UTMCheck.php");
 ?>
 <!DOCTYPE html>
 
-
 <html lang="en">
 	<head>
-			<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-K5NXH6RG');</script>
+		<!-- Google Tag Manager -->
+		<script>
+			;(function (w, d, s, l, i) {
+				w[l] = w[l] || []
+				w[l].push({
+					'gtm.start': new Date().getTime(),
+					event: 'gtm.js',
+				})
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : ''
+				j.async = true
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+				f.parentNode.insertBefore(j, f)
+			})(window, document, 'script', 'dataLayer', 'GTM-K5NXH6RG')
+		</script>
 		<!-- End Google Tag Manager -->
 
 		<meta charset="UTF-8" />
@@ -66,24 +75,26 @@ require_once("PL/UTMCheck.php");
 	</head>
 	<body>
 		<div id="app" data-v-app="">
+
+			<!-- Модал телефона -->
 			<div
 				data-v-61485933=""
 				id="phone-modal"
 				data-v-719c0bb5=""
 				class="modal hide"
-				style="--b6ff6232: url('/modal-msg-bg.jpg')"
+				style="--b6ff6232: url('/modal-msg-bg.jpg');"
 			>
 				<div data-v-61485933="" class="modal-content">
 					<div data-v-61485933="" class="modal-top">
 						<div
 							data-v-61485933=""
 							class="close-button"
-							onclick="document.getElementById('phone-modal').classList.toggle('hide');"
+							onclick="document.getElementById('phone-modal').classList.toggle('hide');closeModal();"
 						>
 							<img
 								data-v-61485933=""
 								src="/icns/close.svg"
-								style="vertical-align: middle; width: 2em"
+								style="vertical-align: middle; width: 2.2em"
 							/>
 						</div>
 					</div>
@@ -92,48 +103,91 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-719c0bb5=""
 								class="modal-contact-messenger"
+								style="padding: 0px clamp(2.5rem, 0.682rem + 9.09vw, 7.5rem);"
 							>
-								<h1 data-v-719c0bb5="">
-									введите свой номер телефона и мы свяжемся с
-									вами
+								<h1 data-v-719c0bb5="" class="title-modal-1">
+									Позвоните нам
 								</h1>
-								<form class="send_mail"
+
+								<div class="modal-number">
+									<a href="tel:971507190519" class="modal-number-tel">+971 50 719 0519</a>
+									<div class="modal-number-bg">+971 50 719 0519</div>
+									<button class="modal-number-btn" onclick="document.querySelector('.modal-number-bg').classList.add('modal-number-bg-active');document.querySelector('.modal-number-btn').classList.add('modal-number-btn-active');
+									setTimeout(function() {document.querySelector('.modal-number-bg').style.display = 'none'; 
+									document.querySelector('.modal-number-btn').style.display = 'none'; }, 1000);">ПОКАЗАТЬ</button>
+								</div>
+
+								<form
+									class="send_mail"
 									action="mail.php"
 									method="post"
-									data-v-719c0bb5=""
-								>
-									<input
+									data-v-719c0bb5="">
+
+									<!-- <input
 										data-v-719c0bb5=""
 										placeholder="НОМЕР ТЕЛЕФОНА"
 										name="username"
 										required=""
-										aria-required=""
-									/><!----><!---->
+										aria-required=""/> -->
+
+									<p data-v-719c0bb5="" style="margin-top: 1em; font-size: 1.5em;">ИЛИ НАПИШИТЕ В УДОБНЫЙ ВАМ МЕССЕНДЖЕР</p>
+									
+									<div data-v-719c0bb5="" class="socials">
+										<a href="https://t.me/">
+											<img
+												data-v-719c0bb5=""
+												id="messagers-modal-tg"
+												class="icon"
+												src="assets/telegram.svg"
+												alt="telegram"
+												onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-ws').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Телеграмм';"
+											/>
+										</a>
+										<a href="https://api.whatsapp.com/">
+											<img
+												data-v-719c0bb5=""
+												id="messagers-modal-ws"
+												class="icon"
+												src="assets/whatsapp.svg"
+												alt="whatsapp"
+												onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-tg').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Ватсап';"
+											/>
+										</a>
+									</div>
+
 									<div data-v-719c0bb5="" class="check-group">
 										<input
 											data-v-719c0bb5=""
+											checked
 											type="checkbox"
 											required=""
-											checked
 										/>
 										<p data-v-719c0bb5="">
 											Я согласен на обработку персональных
 											данных
 										</p>
 									</div>
-									<!----><button
+									<!-- <input
+										type="hidden"
+										value=""
+										name="type"
+										id="messagers-modal-type"
+									/>
+									<button
 										data-v-719c0bb5=""
 										type="submit"
 										class="fancy-button"
 									>
 										ОТПРАВИТЬ
-									</button>
+									</button> -->
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Модал кнопок -->
 			<div
 				data-v-61485933=""
 				id="messagers-modal"
@@ -161,16 +215,15 @@ require_once("PL/UTMCheck.php");
 								data-v-719c0bb5=""
 								class="modal-contact-messenger"
 							>
-								<h1 data-v-719c0bb5="">
-									введите ваши данные и мы напишем вам в
-									мессенджере
-								</h1>
-								<form class="send_mail"
+								<h1 data-v-719c0bb5="" class="title-modal-1">НАПИШИТЕ НАМ В УДОБНОМ МЕССЕНДЖЕРЕ</h1>
+
+								<form
+									class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
 								>
-									<input
+									<!-- <input
 										data-v-719c0bb5=""
 										placeholder="НОМЕР ТЕЛЕФОНА"
 										name="username"
@@ -183,17 +236,32 @@ require_once("PL/UTMCheck.php");
 									>
 										ПО ЖЕЛАНИЮ, ВЫБЕРИТЕ УДОБНЫЙ ВАМ
 										МЕССЕНДЖЕР
-										<!---->
-									</p>
+									</p> -->
 									<div data-v-719c0bb5="" class="socials">
 
-										<img data-v-719c0bb5="" id="messagers-modal-tg" class="icon" src="assets/telegram.svg" alt="telegram" 
-										onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-ws').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Телеграмм';">
+										<a href="https://t.me/">
+											<img
+												data-v-719c0bb5=""
+												id="messagers-modal-tg"
+												class="icon"
+												src="assets/telegram.svg"
+												alt="telegram"
+												onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-ws').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Телеграмм';"
+											/>
+										</a>
 
-										<img data-v-719c0bb5="" id="messagers-modal-ws" class="icon" src="assets/whatsapp.svg" alt="whatsapp" 
-										onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-tg').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Ватсап';">
-
+										<a href="https://api.whatsapp.com/">
+											<img
+												data-v-719c0bb5=""
+												id="messagers-modal-ws"
+												class="icon"
+												src="assets/whatsapp.svg"
+												alt="whatsapp"
+												onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-tg').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Ватсап';"
+											/>
+										</a>
 									</div>
+
 									<div data-v-719c0bb5="" class="check-group">
 										<input
 											data-v-719c0bb5=""
@@ -206,8 +274,7 @@ require_once("PL/UTMCheck.php");
 											данных
 										</p>
 									</div>
-									<!---->
-									<input
+									<!-- <input
 										type="hidden"
 										value=""
 										name="type"
@@ -219,26 +286,27 @@ require_once("PL/UTMCheck.php");
 										class="fancy-button"
 									>
 										ОТПРАВИТЬ
-									</button>
+									</button> -->
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			<!-- Модал "Заказать звонок" -->
 			<div
 				data-v-61485933=""
-				id="all-modal"
+				id="request-call"
 				data-v-719c0bb5=""
 				class="modal hide"
-				style="--b6ff6232: url('/modal-msg-bg.jpg')"
-			>
+				style="--b6ff6232: url('/modal-msg-bg.jpg')">
 				<div data-v-61485933="" class="modal-content">
 					<div data-v-61485933="" class="modal-top">
 						<div
 							data-v-61485933=""
 							class="close-button"
-							onclick="document.getElementById('all-modal').classList.toggle('hide');"
+							onclick="document.getElementById('request-call').classList.toggle('hide');"
 						>
 							<img
 								data-v-61485933=""
@@ -254,10 +322,10 @@ require_once("PL/UTMCheck.php");
 								class="modal-contact-messenger"
 							>
 								<h1 data-v-719c0bb5="">
-									введите ваши данные и мы свяжемся с вами
-									удобным для вас способом
+									введите свой номер телефона и мы свяжемся с вами
 								</h1>
-								<form class="send_mail"
+								<form
+									class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
@@ -269,7 +337,7 @@ require_once("PL/UTMCheck.php");
 										required=""
 										aria-required=""
 									/>
-									<p
+									<!-- <p
 										data-v-719c0bb5=""
 										style="margin-top: 1em"
 									>
@@ -278,17 +346,38 @@ require_once("PL/UTMCheck.php");
 										<span data-v-719c0bb5=""
 											>ИЛИ ТЕЛЕФОН</span
 										>
-									</p>
-									<div data-v-719c0bb5="" class="socials">
-										<img data-v-719c0bb5="" style="transform: scale(0.85);" id="all-modal-phone" class="icon" src="assets/phone.png" alt="phone" 
-										onclick="this.classList.add('selected');document.getElementById('all-modal-ws').classList.remove('selected');document.getElementById('all-modal-tg').classList.remove('selected'); document.getElementById('all-modal-type').value = 'Телефон';">
-										
-										<img data-v-719c0bb5="" id="all-modal-tg" class="icon" src="assets/telegram.svg" alt="telegram" 
-										onclick="this.classList.add('selected');document.getElementById('all-modal-ws').classList.remove('selected');document.getElementById('all-modal-phone').classList.remove('selected'); document.getElementById('all-modal-type').value = 'Телеграмм';">
+									</p> -->
 
-										<img data-v-719c0bb5="" id="all-modal-ws" class="icon" src="assets/whatsapp.svg" alt="whatsapp" 
-										onclick="this.classList.add('selected');document.getElementById('all-modal-tg').classList.remove('selected');document.getElementById('all-modal-phone').classList.remove('selected'); document.getElementById('all-modal-type').value = 'Ватсап';">
-									</div>
+									<!-- <div data-v-719c0bb5="" class="socials">
+										<img
+											data-v-719c0bb5=""
+											style="transform: scale(0.85)"
+											id="all-modal-phone"
+											class="icon"
+											src="assets/phone.png"
+											alt="phone"
+											onclick="this.classList.add('selected');document.getElementById('all-modal-ws').classList.remove('selected');document.getElementById('all-modal-tg').classList.remove('selected'); document.getElementById('all-modal-type').value = 'Телефон';"
+										/>
+
+										<img
+											data-v-719c0bb5=""
+											id="all-modal-tg"
+											class="icon"
+											src="assets/telegram.svg"
+											alt="telegram"
+											onclick="this.classList.add('selected');document.getElementById('all-modal-ws').classList.remove('selected');document.getElementById('all-modal-phone').classList.remove('selected'); document.getElementById('all-modal-type').value = 'Телеграмм';"
+										/>
+
+										<img
+											data-v-719c0bb5=""
+											id="all-modal-ws"
+											class="icon"
+											src="assets/whatsapp.svg"
+											alt="whatsapp"
+											onclick="this.classList.add('selected');document.getElementById('all-modal-tg').classList.remove('selected');document.getElementById('all-modal-phone').classList.remove('selected'); document.getElementById('all-modal-type').value = 'Ватсап';"
+										/>
+									</div> -->
+
 									<div data-v-719c0bb5="" class="check-group">
 										<input
 											data-v-719c0bb5=""
@@ -301,7 +390,6 @@ require_once("PL/UTMCheck.php");
 											данных
 										</p>
 									</div>
-									<!---->
 									<input
 										type="hidden"
 										value=""
@@ -321,6 +409,8 @@ require_once("PL/UTMCheck.php");
 					</div>
 				</div>
 			</div>
+
+			<!-- Модал TELEGRAM -->
 			<div
 				data-v-61485933=""
 				id="tg-modal"
@@ -347,29 +437,51 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-719c0bb5=""
 								class="modal-contact-messenger"
-							>
-								<h1 data-v-719c0bb5="">
-									введите ваши данные и мы напишем вам в
-									telegram
-								</h1>
-								<form class="send_mail"
+								style="padding: 0 clamp(0rem, -1.818rem + 9.09vw, 5rem)">
+								<h1 data-v-719c0bb5="">Напишите нам в Telegram</h1>
+
+								<form
+									class="send_mail"
 									action="mail.php"
 									method="post"
+									id="telegram-form-my"
 									data-v-719c0bb5=""
+									style="min-width: auto !important;"
 								>
-									<input
-										id="tg"
+									<!-- <input
 										data-v-719c0bb5=""
-										type="text"
-										placeholder="НОМЕР ТЕЛЕФОНА ИЛИ ИМЯ ПОЛЬЗОВАТЕЛЯ"
+										placeholder="НОМЕР ТЕЛЕФОНА"
 										name="username"
 										required=""
-									/><!----><!---->
+										aria-required=""
+									/>
+									<p
+										data-v-719c0bb5=""
+										style="margin-top: 1em"
+									>
+										ПО ЖЕЛАНИЮ, ВЫБЕРИТЕ УДОБНЫЙ ВАМ
+										МЕССЕНДЖЕР
+									</p> -->
+									<div data-v-719c0bb5="" class="socials" id="telegram">
+
+										<a href="https://t.me/">
+											<img
+												data-v-719c0bb5=""
+												id="messagers-modal-tg"
+												class="icon"
+												src="assets/telegram.svg"
+												alt="telegram"
+												onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-ws').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Телеграмм';"
+											/>
+										</a>
+
+									</div>
+
 									<div data-v-719c0bb5="" class="check-group">
 										<input
 											data-v-719c0bb5=""
-											type="checkbox"
 											checked
+											type="checkbox"
 											required=""
 										/>
 										<p data-v-719c0bb5="">
@@ -377,10 +489,9 @@ require_once("PL/UTMCheck.php");
 											данных
 										</p>
 									</div>
-									<!---->
-									<input
+									<!-- <input
 										type="hidden"
-										value="Телеграмм"
+										value=""
 										name="type"
 										id="messagers-modal-type"
 									/>
@@ -390,13 +501,15 @@ require_once("PL/UTMCheck.php");
 										class="fancy-button"
 									>
 										ОТПРАВИТЬ
-									</button>
+									</button> -->
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Модал WHATSAPP -->
 			<div
 				data-v-61485933=""
 				id="ws-modal"
@@ -423,23 +536,42 @@ require_once("PL/UTMCheck.php");
 							<div
 								data-v-719c0bb5=""
 								class="modal-contact-messenger"
-							>
+								style="padding: 0 clamp(0rem, -1.818rem + 9.09vw, 5rem)">
 								<h1 data-v-719c0bb5="">
-									введите ваши данные и мы напишем вам в
-									whatsapp
+									Напишите нам в WhatsApp
 								</h1>
-								<form class="send_mail"
+								
+								<form
+									class="send_mail"
 									action="mail.php"
 									method="post"
 									data-v-719c0bb5=""
+									id="whatsapp-form-my"
+									style="min-width: auto !important;"
 								>
-									<input
+									<!-- <input
 										data-v-719c0bb5=""
 										placeholder="НОМЕР ТЕЛЕФОНА"
 										name="username"
 										required=""
 										aria-required=""
-									/><!----><!---->
+									/> -->
+
+									<div data-v-719c0bb5="" class="socials" id="whatsapp">
+
+										<a href="https://api.whatsapp.com/">
+											<img
+												data-v-719c0bb5=""
+												id="messagers-modal-ws"
+												class="icon"
+												src="assets/whatsapp.svg"
+												alt="whatsapp"
+												onclick="this.classList.toggle('selected');document.getElementById('messagers-modal-tg').classList.remove('selected'); document.getElementById('messagers-modal-type').value = 'Ватсап';"
+											/>
+										</a>
+
+									</div>
+
 									<div data-v-719c0bb5="" class="check-group">
 										<input
 											data-v-719c0bb5=""
@@ -452,26 +584,28 @@ require_once("PL/UTMCheck.php");
 											данных
 										</p>
 									</div>
-									<!---->
+									
 									<input
 										type="hidden"
 										value="Ватсап"
 										name="type"
 										id="messagers-modal-type"
 									/>
-									<button
+									<!-- <button
 										data-v-719c0bb5=""
 										type="submit"
 										class="fancy-button"
 									>
 										ОТПРАВИТЬ
-									</button>
+									</button> -->
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Модал Zoom -->
 			<div
 				data-v-61485933=""
 				id="zoom-modal"
@@ -508,46 +642,59 @@ require_once("PL/UTMCheck.php");
 									src="/assets/zoom-CUWC7mcD.svg"
 									style="width: 8em"
 								/>
-								<form class="send_mail"
+								<form
+									class="send_mail"
 									data-v-719c0bb5=""
 									action="mail.php"
 									method="post"
 									style="width: 100%"
 								>
-								<div data-v-719c0bb5="" class="zoom-input">
-
-									<input
-										id="date"
-										data-v-719c0bb5=""
-										type="tel"
-										name="username"
-										required=""
-										placeholder="Введите телефон"
-									/>
-
-									<label class="form-zoom" data-custom-date>
-										<div class="custom-input">Введите дату</div>
-										<input type="date" name="date1" 
-											id="date1"
+									<div data-v-719c0bb5="" class="zoom-input">
+										<input
+											id="date"
 											data-v-719c0bb5=""
-											min="2024-03-27"
+											type="tel"
+											name="username"
 											required=""
-											checked
-											value="дд.мм.гггг"
+											placeholder="Введите телефон"
 										/>
-									</label>
 
-									<label class="form-zoom" data-custom-date>
-										<div class="custom-input">Введите время</div>
-										<input type="time" name="date2"
-											id="date2" 
-											data-v-719c0bb5=""
-											min="12:00"
-											max="24:00"
-											required=""
-										/>
-									</label>
+										<label
+											class="form-zoom"
+											data-custom-date
+										>
+											<div class="custom-input">
+												Введите дату
+											</div>
+											<input
+												type="date"
+												name="date1"
+												id="date1"
+												data-v-719c0bb5=""
+												min="2024-03-27"
+												required=""
+												checked
+												value="дд.мм.гггг"
+											/>
+										</label>
 
+										<label
+											class="form-zoom"
+											data-custom-date
+										>
+											<div class="custom-input">
+												Введите время
+											</div>
+											<input
+												type="time"
+												name="date2"
+												id="date2"
+												data-v-719c0bb5=""
+												min="12:00"
+												max="24:00"
+												required=""
+											/>
+										</label>
 									</div>
 									<div data-v-719c0bb5="" class="check-group">
 										<input
@@ -580,15 +727,13 @@ require_once("PL/UTMCheck.php");
 					</div>
 				</div>
 			</div>
-			<!---->
-			<!---->
-			<!---->
+
 			<div data-v-c046ed3e="" class="page">
 				<div data-v-c046ed3e="" class="img-building"></div>
 				<div data-v-c046ed3e="" class="bg">
 					<main data-v-c046ed3e="">
-						<header data-v-a4809a0c="" data-v-c046ed3e="">
-							<div data-v-a4809a0c="" class="logo">
+						<header data-v-a4809a0c="" data-v-c046ed3e="" id="header-my">
+							<div data-v-a4809a0c="" class="logo" id="logo" >
 								<img
 									data-v-a4809a0c=""
 									href="#"
@@ -602,17 +747,24 @@ require_once("PL/UTMCheck.php");
 								<img
 									onclick="document.getElementById('phone-modal').classList.toggle('hide');"
 									data-v-a4809a0c=""
+									id="tel-photo"
 									src="data:image/svg+xml,%3csvg%20width='60'%20height='60'%20viewBox='0%200%2060%2060'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='30'%20cy='30'%20r='29.5'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M23%2022C23%2020.3431%2024.3431%2019%2026%2019H34C35.6569%2019%2037%2020.3431%2037%2022V38C37%2039.6569%2035.6569%2041%2034%2041H26C24.3431%2041%2023%2039.6569%2023%2038V22ZM26%2021C25.4477%2021%2025%2021.4477%2025%2022V38C25%2038.5523%2025.4477%2039%2026%2039H34C34.5523%2039%2035%2038.5523%2035%2038V22C35%2021.4477%2034.5523%2021%2034%2021H26Z'%20fill='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M31.5%2038H28.5V36H31.5V38Z'%20fill='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M26%2020C26%2019.4477%2026.4477%2019%2027%2019H33C33.5523%2019%2034%2019.4477%2034%2020V20.5C34%2022.1569%2032.6569%2023.5%2031%2023.5H29C27.3431%2023.5%2026%2022.1569%2026%2020.5V20ZM28.1338%2021C28.3067%2021.2989%2028.6299%2021.5%2029%2021.5H31C31.3701%2021.5%2031.6933%2021.2989%2031.8662%2021H28.1338Z'%20fill='white'/%3e%3c/svg%3e"
 									alt="tel"
 								/>
 								<div data-v-a4809a0c="">
+									<div class="phone-box">
+										<p class="phone-number-my" id="phone-number-my-top">+971 50 7</p>
+										<a
+											href="#"
+											class="phone-number-btn-my"
+											onclick="document.getElementById('phone-modal').classList.toggle('hide');openModal()"
+										>
+											СМОТРЕТЬ</a
+										>
+									</div>
+
 									<a
-										data-v-a4809a0c=""
-										class="phone-number"
-										href="tel:+<?php echo $PageUTMData["Phone"]["PhoneLink"];?>"
-										><?php echo $PageUTMData["Phone"]["PhoneShow"];?></a
-									><a
-										onclick="document.getElementById('phone-modal').classList.toggle('hide');"
+										onclick="document.getElementById('request-call').classList.toggle('hide');"
 										class="call"
 										href="#"
 										>Заказать звонок</a
@@ -676,6 +828,7 @@ require_once("PL/UTMCheck.php");
 									<div
 										data-v-5896af8b=""
 										class="button-container"
+										onclick="document.getElementById('messagers-modal').classList.toggle('hide');"
 									>
 										<div
 											data-v-5896af8b=""
@@ -684,7 +837,6 @@ require_once("PL/UTMCheck.php");
 											<div
 												data-v-5896af8b=""
 												class="contact-text"
-												onclick="document.getElementById('messagers-modal').classList.toggle('hide');"
 											>
 												<h1 data-v-5896af8b="">
 													НАПИШИТЕ НАМ
@@ -755,14 +907,14 @@ require_once("PL/UTMCheck.php");
 											data-v-5896af8b=""
 											onclick="document.getElementById('tg-modal').classList.toggle('hide');"
 											src="assets/telegram.svg"
-											style="width: 64px;height: 64px;"
+											style="width: 64px; height: 64px"
 											alt="telegram"
 										/>
 										<img
 											data-v-5896af8b=""
 											onclick="document.getElementById('ws-modal').classList.toggle('hide');"
 											src="assets/whatsapp.svg"
-											style="width: 64px;height: 64px;"
+											style="width: 64px; height: 64px"
 											alt="instagram"
 										/>
 									</div>
@@ -831,13 +983,13 @@ require_once("PL/UTMCheck.php");
 										onclick="document.getElementById('tg-modal').classList.toggle('hide');"
 										src="assets/telegram.svg"
 										alt="telegram"
-										style="width: 64px;height: 64px;"
+										style="width: 64px; height: 64px"
 									/><img
 										data-v-5896af8b=""
 										onclick="document.getElementById('ws-modal').classList.toggle('hide');"
 										src="assets/whatsapp.svg"
 										alt="whatsapp"
-										style="width: 64px;height: 64px;"
+										style="width: 64px; height: 64px"
 									/>
 								</div>
 								<img
@@ -870,7 +1022,7 @@ require_once("PL/UTMCheck.php");
 									</h3>
 									<button
 										data-v-8aaa8106=""
-										onclick="document.getElementById('all-modal').classList.toggle('hide');"
+										onclick="document.getElementById('messagers-modal').classList.toggle('hide');"
 										class="fancy-button"
 									>
 										ОФОРМИТЬ
@@ -907,7 +1059,7 @@ require_once("PL/UTMCheck.php");
 										Забронируйте цену сейчас!
 									</h3>
 									<button
-										onclick="document.getElementById('all-modal').classList.toggle('hide');"
+										onclick="document.getElementById('messagers-modal').classList.toggle('hide');"
 										data-v-8aaa8106=""
 										class="fancy-button"
 									>
@@ -953,7 +1105,15 @@ require_once("PL/UTMCheck.php");
 									id="ask-1"
 									class="content hide"
 								>
-									В процессе оформления (ВНЖ) в Объединённых Арабских Эмиратах (ОАЭ), обычно требуется около 7 рабочих дней. Этот период времени включает в себя подачу всех необходимых документов и их последующую обработку соответствующими органами. Однако, стоит учитывать, что этот срок является средним и может варьироваться в зависимости от конкретных обстоятельств и требований.
+									В процессе оформления (ВНЖ) в Объединённых
+									Арабских Эмиратах (ОАЭ), обычно требуется
+									около 7 рабочих дней. Этот период времени
+									включает в себя подачу всех необходимых
+									документов и их последующую обработку
+									соответствующими органами. Однако, стоит
+									учитывать, что этот срок является средним и
+									может варьироваться в зависимости от
+									конкретных обстоятельств и требований.
 								</p>
 							</div>
 							<div
@@ -980,7 +1140,12 @@ require_once("PL/UTMCheck.php");
 									id="ask-2"
 									class="content hide"
 								>
-									При оформлении визы скрытых платежей нет. Все необходимые платежи полностью включены в первоначальную стоимость услуги, составляющую 4990 AED. Это обеспечивает прозрачность и понимание всех затрат заранее.
+									При оформлении визы скрытых платежей нет.
+									Все необходимые платежи полностью включены в
+									первоначальную стоимость услуги,
+									составляющую 4990 AED. Это обеспечивает
+									прозрачность и понимание всех затрат
+									заранее.
 								</p>
 							</div>
 							<div
@@ -1007,7 +1172,13 @@ require_once("PL/UTMCheck.php");
 									id="ask-3"
 									class="content hide"
 								>
-									Да, конечно! Мы предлагаем услугу спонсирования виз для членов вашей семьи. Однако, для того чтобы воспользоваться этой возможностью, вы должны сначала получить Emirates ID. После успешного получения вашего Emirates ID, вы сможете спонсировать визы для своих близких.
+									Да, конечно! Мы предлагаем услугу
+									спонсирования виз для членов вашей семьи.
+									Однако, для того чтобы воспользоваться этой
+									возможностью, вы должны сначала получить
+									Emirates ID. После успешного получения
+									вашего Emirates ID, вы сможете спонсировать
+									визы для своих близких.
 								</p>
 							</div>
 							<div
@@ -1034,8 +1205,13 @@ require_once("PL/UTMCheck.php");
 									id="ask-4"
 									class="content hide"
 								>
-									Оформление резидентской визы в ОАЭ на 1 год стоит 4990 AED "под ключ". Эта цена включает все необходимые услуги и сборы, связанные с процессом получения визы.
+									Оформление резидентской визы в ОАЭ на 1 год
+									стоит 4990 AED "под ключ". Эта цена включает
+									все необходимые услуги и сборы, связанные с
+									процессом получения визы.
+								</p>
 							</div>
+
 							<div
 								data-v-6685df05=""
 								onclick="document.getElementById('ask-5').classList.toggle('hide');"
@@ -1060,7 +1236,15 @@ require_once("PL/UTMCheck.php");
 									id="ask-5"
 									class="content hide"
 								>
-									Если вашу заявку на визу отклонили ранее, не стоит отчаиваться. Вам следует подавать заявку снова, и мы готовы помочь в этом процессе. Благодаря нашему опыту, мы знаем, как правильно подготовить и подать документы, чтобы максимально минимизировать риск повторного отказа. Мы поможем вам на каждом этапе подачи заявки, чтобы увеличить ваши шансы на успешное получение визы.
+									Если вашу заявку на визу отклонили ранее, не
+									стоит отчаиваться. Вам следует подавать
+									заявку снова, и мы готовы помочь в этом
+									процессе. Благодаря нашему опыту, мы знаем,
+									как правильно подготовить и подать
+									документы, чтобы максимально минимизировать
+									риск повторного отказа. Мы поможем вам на
+									каждом этапе подачи заявки, чтобы увеличить
+									ваши шансы на успешное получение визы.
 								</p>
 							</div>
 							<div
@@ -1087,7 +1271,16 @@ require_once("PL/UTMCheck.php");
 									id="ask-6"
 									class="content hide"
 								>
-									С резидентской визой ОАЭ вы можете проживать где угодно в пределах страны, а также за её пределами. Единственное требование — вам необходимо возвращаться в ОАЭ как минимум один раз каждые шесть месяцев, чтобы подтвердить свой резидентский статус. В остальном, нет никаких ограничений на ваше место проживания, предоставляя вам свободу выбора места, которое наилучшим образом соответствует вашим нуждам и предпочтениям.
+									С резидентской визой ОАЭ вы можете проживать
+									где угодно в пределах страны, а также за её
+									пределами. Единственное требование — вам
+									необходимо возвращаться в ОАЭ как минимум
+									один раз каждые шесть месяцев, чтобы
+									подтвердить свой резидентский статус. В
+									остальном, нет никаких ограничений на ваше
+									место проживания, предоставляя вам свободу
+									выбора места, которое наилучшим образом
+									соответствует вашим нуждам и предпочтениям.
 								</p>
 							</div>
 							<div
@@ -1114,7 +1307,16 @@ require_once("PL/UTMCheck.php");
 									id="ask-7"
 									class="content hide"
 								>
-									Срок действия резидентской визы в ОАЭ варьируется от 1 года до 10 лет в случае получения так называемой "золотой визы". Также существуют варианты на 2, 3 и 5 лет. Конкретный срок зависит от индивидуальных потребностей и критериев, которые вы удовлетворяете. Возможность выбора срока позволяет гибко подойти к планированию вашего пребывания в стране, исходя из ваших личных и профессиональных обстоятельств.
+									Срок действия резидентской визы в ОАЭ
+									варьируется от 1 года до 10 лет в случае
+									получения так называемой "золотой визы".
+									Также существуют варианты на 2, 3 и 5 лет.
+									Конкретный срок зависит от индивидуальных
+									потребностей и критериев, которые вы
+									удовлетворяете. Возможность выбора срока
+									позволяет гибко подойти к планированию
+									вашего пребывания в стране, исходя из ваших
+									личных и профессиональных обстоятельств.
 								</p>
 							</div>
 							<div
@@ -1141,9 +1343,18 @@ require_once("PL/UTMCheck.php");
 									id="ask-8"
 									class="content hide"
 								>
-									Безусловно, в получении резидентской визы ОАЭ может произойти отказ, однако такие случаи крайне редки. На основе нашего опыта, за время работы мы успешно оформили более 2000 виз, и лишь в одном случае столкнулись с отказом. Этот отказ был вызван тем, что клиент не сообщил о наличии судимости за мелкое хулиганство в своей стране. Поэтому мы настоятельно рекомендуем предоставлять полную и точную информацию при подаче документов на визу, чтобы минимизировать риск отказа.
-
-
+									Безусловно, в получении резидентской визы
+									ОАЭ может произойти отказ, однако такие
+									случаи крайне редки. На основе нашего опыта,
+									за время работы мы успешно оформили более
+									2000 виз, и лишь в одном случае столкнулись
+									с отказом. Этот отказ был вызван тем, что
+									клиент не сообщил о наличии судимости за
+									мелкое хулиганство в своей стране. Поэтому
+									мы настоятельно рекомендуем предоставлять
+									полную и точную информацию при подаче
+									документов на визу, чтобы минимизировать
+									риск отказа.
 								</p>
 							</div>
 						</div>
@@ -1430,7 +1641,7 @@ require_once("PL/UTMCheck.php");
 							<button
 								data-v-c046ed3e=""
 								class="fancy-button"
-								onclick="document.getElementById('all-modal').classList.toggle('hide');"
+								onclick="document.getElementById('messagers-modal').classList.toggle('hide');"
 								style="width: fit-content"
 							>
 								ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
@@ -1616,7 +1827,10 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">01</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
@@ -1637,11 +1851,14 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">02</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
-									<h3 data-v-70fe3462="" class="h_my" >
+									<h3 data-v-70fe3462="" class="h_my">
 										консультации по открытию бизнеса
 									</h3>
 									<p data-v-70fe3462="">
@@ -1657,7 +1874,10 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">03</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
@@ -1677,7 +1897,10 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">04</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
@@ -1697,7 +1920,10 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">05</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
@@ -1717,7 +1943,10 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">06</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
@@ -1737,7 +1966,10 @@ require_once("PL/UTMCheck.php");
 								data-v-c046ed3e=""
 								class="card card_my"
 							>
-								<div data-v-70fe3462="" class="number-heading number-heading_my">
+								<div
+									data-v-70fe3462=""
+									class="number-heading number-heading_my"
+								>
 									<h1 data-v-70fe3462="">07</h1>
 								</div>
 								<div data-v-70fe3462="" class="container">
@@ -1770,7 +2002,7 @@ require_once("PL/UTMCheck.php");
 								</p>
 								<button
 									data-v-c046ed3e=""
-									onclick="document.getElementById('all-modal').classList.toggle('hide');"
+									onclick="document.getElementById('messagers-modal').classList.toggle('hide');"
 									style="font-size: 1.5em"
 									class="fancy-button"
 								>
@@ -1946,10 +2178,18 @@ require_once("PL/UTMCheck.php");
 															allowfullscreen
 														></iframe> -->
 
-														<iframe 
-														data-v-182029f8=""
-														class="lazy"
-														width="466" height="829" src="https://www.youtube.com/embed/nrqnvJCwilg" title="отзыв 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+														<iframe
+															data-v-182029f8=""
+															class="lazy"
+															width="466"
+															height="829"
+															src="https://www.youtube.com/embed/nrqnvJCwilg"
+															title="отзыв 1"
+															frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+															referrerpolicy="strict-origin-when-cross-origin"
+															allowfullscreen
+														></iframe>
 													</div>
 												</div>
 											</div>
@@ -1986,11 +2226,19 @@ require_once("PL/UTMCheck.php");
 															allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 															allowfullscreen
 														></iframe> -->
-														
-														<iframe 
-														data-v-182029f8=""
-														class="lazy"
-														width="466" height="829" src="https://www.youtube.com/embed/OP5Mw_Lyhdg" title="отзыв 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+														<iframe
+															data-v-182029f8=""
+															class="lazy"
+															width="466"
+															height="829"
+															src="https://www.youtube.com/embed/OP5Mw_Lyhdg"
+															title="отзыв 2"
+															frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+															referrerpolicy="strict-origin-when-cross-origin"
+															allowfullscreen
+														></iframe>
 													</div>
 												</div>
 											</div>
@@ -2028,10 +2276,18 @@ require_once("PL/UTMCheck.php");
 															allowfullscreen
 														></iframe> -->
 
-														<iframe 
-														data-v-182029f8=""
-														class="lazy"
-														width="466" height="829" src="https://www.youtube.com/embed/j4UJfT07GfA" title="отзыв 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+														<iframe
+															data-v-182029f8=""
+															class="lazy"
+															width="466"
+															height="829"
+															src="https://www.youtube.com/embed/j4UJfT07GfA"
+															title="отзыв 3"
+															frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+															referrerpolicy="strict-origin-when-cross-origin"
+															allowfullscreen
+														></iframe>
 													</div>
 												</div>
 											</div>
@@ -2069,10 +2325,18 @@ require_once("PL/UTMCheck.php");
 															allowfullscreen
 														></iframe> -->
 
-														<iframe 
-														data-v-182029f8=""
-														class="lazy"
-														width="466" height="829" src="https://www.youtube.com/embed/ALCJ-0OcU-U" title="отзыв 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+														<iframe
+															data-v-182029f8=""
+															class="lazy"
+															width="466"
+															height="829"
+															src="https://www.youtube.com/embed/ALCJ-0OcU-U"
+															title="отзыв 4"
+															frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+															referrerpolicy="strict-origin-when-cross-origin"
+															allowfullscreen
+														></iframe>
 													</div>
 												</div>
 											</div>
@@ -2110,10 +2374,18 @@ require_once("PL/UTMCheck.php");
 															allowfullscreen
 														></iframe> -->
 
-														<iframe 
-														data-v-182029f8=""
-														class="lazy"
-														width="466" height="829" src="https://www.youtube.com/embed/_cIWS84dB2A" title="отзыв 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+														<iframe
+															data-v-182029f8=""
+															class="lazy"
+															width="466"
+															height="829"
+															src="https://www.youtube.com/embed/_cIWS84dB2A"
+															title="отзыв 5"
+															frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+															referrerpolicy="strict-origin-when-cross-origin"
+															allowfullscreen
+														></iframe>
 													</div>
 												</div>
 											</div>
@@ -2267,13 +2539,18 @@ require_once("PL/UTMCheck.php");
 									<h3 class="box-heading" data-v-a11a2958="">
 										ТЕЛЕФОН:
 									</h3>
-									<p data-v-a11a2958="">
+
+									<div class="phone-box" id="phone-box-2">
+										<p class="phone-number-my">+971 50 7</p>
 										<a
-											href="tel:+<?php echo $PageUTMData["Phone"]["PhoneLink"];?>"
-											data-v-a11a2958=""
-											><?php echo $PageUTMData["Phone"]["PhoneShow"];?></a
+											href="#"
+											class="phone-number-btn-my"
+											onclick="document.getElementById('phone-modal').classList.toggle('hide');openModal();"
 										>
-									</p>
+											СМОТРЕТЬ</a
+										>
+									</div>
+
 								</div>
 								<div data-v-a11a2958="" class="box">
 									<img
@@ -2282,10 +2559,10 @@ require_once("PL/UTMCheck.php");
 										src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='120'%20viewBox='0%200%20120%20120'%3e%3cdefs%3e%3cstyle%3e%20.a,%20.c%20{%20fill:%20none;%20}%20.a%20{%20stroke:%20%23fff;%20stroke-linecap:%20round;%20stroke-miterlimit:%202.37;%20stroke-width:%201.2px;%20stroke-dasharray:%208.4%2016.8%2026.4%209.6;%20}%20.b%20{%20fill:%20%23fff;%20}%20.c%20{%20stroke:%20%23000;%20stroke-linejoin:%20round;%20stroke-width:%201.91px;%20}%20%3c/style%3e%3c/defs%3e%3ctitle%3ephone%3c/title%3e%3ccircle%20class='a'%20cx='60'%20cy='60'%20r='59.4'/%3e%3cpath%20class='b'%20d='M60,6.75h0A53.25,53.25,0,0,1,113.25,60h0A53.25,53.25,0,0,1,60,113.25h0A53.25,53.25,0,0,1,6.75,60h0A53.25,53.25,0,0,1,60,6.75Z'%20transform='translate(0%200)'/%3e%3cpath%20class='c'%20d='M57.14,73.37h5.72M52.36,79.1H67.64a3.82,3.82,0,0,0,3.82-3.82V44.72a3.82,3.82,0,0,0-3.82-3.82H52.36a3.82,3.82,0,0,0-3.82,3.82V75.28A3.82,3.82,0,0,0,52.36,79.1Zm1.91-38.2H65.73v1a3.82,3.82,0,0,1-3.82,3.82H58.09a3.82,3.82,0,0,1-3.82-3.82Z'%20transform='translate(0%200)'/%3e%3c/svg%3e"
 										alt="messenger"
 									/>
-									<h3 data-v-a11a2958="" class="box-heading">
+									<h3 data-v-a11a2958="" class="box-heading" style="margin-bottom: 0;">
 										МЕССЕНДЖЕРЫ:
 									</h3>
-									<div data-v-a11a2958="" class="socials">
+									<div data-v-a11a2958="" class="socials" style="margin-top: 0em;">
 										<img
 											data-v-a11a2958=""
 											onclick="document.getElementById('tg-modal').classList.toggle('hide');"
@@ -2334,45 +2611,89 @@ require_once("PL/UTMCheck.php");
 				</div>
 			</div>
 		</div>
-		
-		
-		
-		<div data-v-61485933="" id="success-modal" data-v-719c0bb5="" class="modal success hide" style="--b6ff6232: url('/modal-msg-bg.jpg')">
-				<div data-v-61485933="" class="modal-content">
-					<div data-v-61485933="" class="modal-top">
-						<div data-v-61485933="" class="close-button" onclick="document.getElementById('success-modal').classList.toggle('hide');">
-							<img data-v-61485933="" src="/icns/close.svg" style="vertical-align: middle; width: 2em">
-						</div>
+
+		<div
+			data-v-61485933=""
+			id="success-modal"
+			data-v-719c0bb5=""
+			class="modal success hide"
+			style="--b6ff6232: url('/modal-msg-bg.jpg')"
+		>
+			<div data-v-61485933="" class="modal-content">
+				<div data-v-61485933="" class="modal-top">
+					<div
+						data-v-61485933=""
+						class="close-button"
+						onclick="document.getElementById('success-modal').classList.toggle('hide');"
+					>
+						<img
+							data-v-61485933=""
+							src="/icns/close.svg"
+							style="vertical-align: middle; width: 2em"
+						/>
 					</div>
-					<div data-v-61485933="" style="padding-bottom: 2em">
-						<div data-v-61485933="">
-							<div data-v-719c0bb5="" class="modal-contact-messenger"><h1 data-v-719c0bb5="">Спасибо! <br> Ваше сообщение успешно отправлено</h1></div>
+				</div>
+				<div data-v-61485933="" style="padding-bottom: 2em">
+					<div data-v-61485933="">
+						<div data-v-719c0bb5="" class="modal-contact-messenger">
+							<h1 data-v-719c0bb5="">
+								Спасибо! <br />
+								Ваше сообщение успешно отправлено
+							</h1>
 						</div>
 					</div>
 				</div>
 			</div>
-		
+		</div>
+
 		<!-- Загрузка стилий для шрифта -->
 		<script>
-			const fontLink = document.createElement('link');
-			fontLink.rel = 'stylesheet';
-			fontLink.href = 'assets/optimization.css';
+			const fontLink = document.createElement('link')
+			fontLink.rel = 'stylesheet'
+			fontLink.href = 'assets/optimization.css'
+
+			document.fonts.ready.then(function () {
+				document.head.appendChild(fontLink)
+			})
+		</script>
 			
-			document.fonts.ready.then(function() {
-				document.head.appendChild(fontLink);
-			});
+		<!-- Удаление закрытого номера при >1000px -->
+		<script>
+			if (window.matchMedia("(max-width: 1000px)").matches) {
+				document.querySelector('.modal-number-bg').style.display = 'none';
+				document.querySelector('.modal-number-btn').style.display = 'none';
+			}
+		</script>
+			
+		<!-- Фикс прокрутки сайта при открытии модального окна -->
+		<script>
+			let scrollPosition = 0; // Глобальная переменная для хранения позиции прокрутки
+
+			function openModal() {
+				scrollPosition = window.pageYOffset; // Сохраняем текущую позицию прокрутки
+				document.body.classList.add('modal-open');
+				// Другие действия для открытия модального окна
+			}
+
+			function closeModal() {
+				document.body.classList.remove('modal-open');
+				// Другие действия для закрытия модального окна
+				window.scrollTo(0, scrollPosition); // Восстанавливаем позицию прокрутки
+			}
 		</script>
 
 		<!-- Фикс формы zoom для ios систем -->
 		<script>
-			const customLabels = document.querySelectorAll('label[data-custom-date]')
+			const customLabels = document.querySelectorAll(
+				'label[data-custom-date]'
+			)
 			customLabels.forEach(makeCustomDateLabel)
 
 			function makeCustomDateLabel(label) {
 				const customInput = label.querySelector('.custom-input')
 				const placeholder = customInput.innerText
 
-				const input = label.querySelector('input');
+				const input = label.querySelector('input')
 
 				if (['date', 'time'].includes(input.type) === false) {
 					return
@@ -2386,7 +2707,8 @@ require_once("PL/UTMCheck.php");
 					if (value) {
 						label.querySelector('.custom-input').innerText = value
 					} else {
-						label.querySelector('.custom-input').innerText = placeholder
+						label.querySelector('.custom-input').innerText =
+							placeholder
 					}
 				})
 			}
@@ -2399,29 +2721,37 @@ require_once("PL/UTMCheck.php");
 			var myLazyLoad = new LazyLoad()
 			myLazyLoad.update()
 		</script>
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
 		<script>
-$(".send_mail").on("submit", function(){
-	$.ajax({
-		url: '/mail.php',
-		method: 'post',
-		dataType: 'html',
-		data: $(this).serialize(),
-		success: function(data){
-			$('.modal').addClass('hide');
-			$('.success').removeClass('hide');
-			return true;
-		}
-	});
-	return false;
-});
-</script>
-		
-		
+			$('.send_mail').on('submit', function () {
+				$.ajax({
+					url: '/mail.php',
+					method: 'post',
+					dataType: 'html',
+					data: $(this).serialize(),
+					success: function (data) {
+						$('.modal').addClass('hide')
+						$('.success').removeClass('hide')
+						return true
+					},
+				})
+				return false
+			})
+		</script>
+
 		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5NXH6RG"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-K5NXH6RG"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 	</body>
 </html>
-
